@@ -26,14 +26,23 @@
 5. **不要为了"完整"而收录维护者自己的站点。** 本目录当前明确不收入运营者本人的站点。
 6. 不要主动新增学校条目。地址必须经过实际核查，见下。
 
-## Starlight 的四个坑（本版本 0.42.7 / Astro 7.2.10 实测）
+## Starlight 与部署的五个坑（本版本 0.42.7 / Astro 7.2.10 实测）
 
 1. **提示框语法**：用 `:::note[标题]` / `:::tip` / `:::caution` / `:::danger`，配对的 `:::` 收尾。**`> [!NOTE]` 这种 GitHub/VitePress 写法不认**，会把方括号原文渲染出来。
 2. **中文界面**：必须写 `locales: { root: { label, lang } }`。只写 `defaultLocale: 'zh-CN'` 时 `<html lang>` 仍是 `en`、界面仍是英文。
 3. **标题拼接**：本版本没有 `titleTemplate`，`<title>` 永远是「页面标题 | 站点标题」。想让首页不出现「高校 Wiki 目录 | 高校 Wiki 目录」，就把首页 frontmatter 的 `title` 写成「首页」。
 4. **访问路径**：这是组织用户站，`base: '/'`，本地 `http://localhost:4321/` 就是站点根，与线上地址形状一致（不再有“少打一段就 404”的问题）。Markdown 内部链接仍用相对路径（`about/`），这样将来若改回项目站点不用重写。
 
-构建期无害但会刷屏的两条警告可以忽略：`The collection "i18n" does not exist or is empty`、`Entry docs → 404 was not found`。
+5. **Pages 来源必须是 GitHub Actions，不是分支**。GitHub 会对名为 `<org>.github.io` 的仓库**自动开启 Pages 且默认 legacy 模式**（直接把仓库根目录当站点发布），而仓库根目录没有 `index.html`，结果就是线上 404。检查与修正：
+
+   ```bash
+   curl -s -H "Authorization: Bearer <TOKEN>" https://api.github.com/repos/collegewiki/collegewiki.github.io/pages \
+     | python3 -c "import sys,json;print(json.load(sys.stdin).get('build_type'))"   # 应为 workflow，不是 legacy
+   curl -s -X PUT -H "Authorization: Bearer <TOKEN>" -H "Accept: application/vnd.github+json" \
+     -d '{\"build_type\":\"workflow\"}' https://api.github.com/repos/collegewiki/collegewiki.github.io/pages   # 204 = 已切换
+   ```
+
+   构建期无害但会刷屏的两条警告可以忽略：`The collection "i18n" does not exist or is empty`、`Entry docs → 404 was not found`。
 
 ## 核查一个站点的正确姿势
 
