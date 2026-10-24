@@ -39,10 +39,10 @@
    curl -s -H "Authorization: Bearer <TOKEN>" https://api.github.com/repos/collegewiki/collegewiki.github.io/pages \
      | python3 -c "import sys,json;print(json.load(sys.stdin).get('build_type'))"   # 应为 workflow，不是 legacy
    curl -s -X PUT -H "Authorization: Bearer <TOKEN>" -H "Accept: application/vnd.github+json" \
-     -d '{\"build_type\":\"workflow\"}' https://api.github.com/repos/collegewiki/collegewiki.github.io/pages   # 204 = 已切换
+     -d '{"build_type":"workflow"}' https://api.github.com/repos/collegewiki/collegewiki.github.io/pages   # 204 = 已切换
    ```
 
-   构建期无害但会刷屏的两条警告可以忽略：`The collection "i18n" does not exist or is empty`、`Entry docs → 404 was not found`。
+构建期无害但会刷屏的两条警告可以忽略：`The collection "i18n" does not exist or is empty`、`Entry docs → 404 was not found`。
 
 ## 核查一个站点的正确姿势
 
