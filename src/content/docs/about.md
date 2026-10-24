@@ -25,7 +25,7 @@ sidebar:
 
 本站不会因为"未被事先征询"而拒绝你的要求：
 
-- 要求**移除条目**，或希望修改描述、隐藏某个字段：在 [GitHub 仓库](https://github.com/eryuemu/college-wiki-hub) 提 issue 即可，无需解释理由。
+- 要求**移除条目**，或希望修改描述、隐藏某个字段：在 [GitHub 仓库](https://github.com/collegewiki/collegewiki.github.io) 提 issue 即可，无需解释理由。
 - 确认收到后 **7 天内**处理，移除会连同 git 历史一起从站点产物中去掉展示。
 
 ## 维护带宽

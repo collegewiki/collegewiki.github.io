@@ -8,7 +8,7 @@ SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 Copyright (c) 2026 eryuemu
 
-站点：<https://eryuemu.github.io/college-wiki-hub/> · 仓库：<https://github.com/eryuemu/college-wiki-hub>
+站点：<https://collegewiki.github.io/> · 仓库：<https://github.com/collegewiki/collegewiki.github.io>
 
 ## 一、本协议管什么，不管什么
 
@@ -41,7 +41,7 @@ Copyright (c) 2026 eryuemu
 
 ## 五、移除与更正
 
-被登记的站点负责人或权利人可要求移除条目、修改描述或隐藏字段，**无需说明理由**，本项目确认收到后 7 天内处理。请通过 [GitHub Issues](https://github.com/eryuemu/college-wiki-hub/issues) 提出。
+被登记的站点负责人或权利人可要求移除条目、修改描述或隐藏字段，**无需说明理由**，本项目确认收到后 7 天内处理。请通过 [GitHub Issues](https://github.com/collegewiki/collegewiki.github.io/issues) 提出。
 
 需要说明的是：本项目从未逐一征询各站点负责人的意见。这是发起者的判断——登记一个公开站点的名称与网址，本身不构成对其内容的复制或演绎。如果这个前提让你不适，请按上述方式提出，我们会照办。
 

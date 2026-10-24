@@ -2,12 +2,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// GitHub Pages 项目站点：仓库名决定 base 与 site，改名时两处一起改。
-const repo = 'college-wiki-hub';
+// 组织用户站：仓库名必须是 <组织>.github.io，站点直接挂在根路径，没有仓库名那一段。
+const owner = 'collegewiki';
+const repo = 'collegewiki.github.io';
 
 export default defineConfig({
-	site: `https://eryuemu.github.io/${repo}/`,
-	base: `/${repo}/`,
+	site: `https://${owner}.github.io/`,
+	base: '/',
 	trailingSlash: 'always',
 	integrations: [
 		starlight({
@@ -22,11 +23,11 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub 仓库',
-					href: `https://github.com/eryuemu/${repo}`,
+					href: `https://github.com/${owner}/${repo}`,
 				},
 			],
 			editLink: {
-				baseUrl: `https://github.com/eryuemu/${repo}/edit/main/src/content/docs/`,
+				baseUrl: `https://github.com/${owner}/${repo}/edit/main/src/content/docs/`,
 			},
 			lastUpdated: true,
 			sidebar: [

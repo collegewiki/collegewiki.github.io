@@ -22,7 +22,7 @@
 1. **不要写自定义组件、不要写 CSS/JS、不要加 UI 框架。** 维护者的原话是不再让 AI 从头搓前端。目录内容必须是 Markdown 表格。若确实需要数据驱动渲染（例如条目过百），先提出方案取得同意，因为那会引入 MDX 里的 JSX。
 2. **不要引入 CI 校验、schema、lint、husky、自动检查工作流**，除非维护者明确要求。这类东西目前是明确推迟状态，不是遗漏。
 3. **不要往条目里写正文摘录、站内截图、他人昵称、个人 QQ 或私人邮箱。** git 历史无法安全擦除。
-4. **不要把站点改名、改域名、买域名或改 `base`/`site`**；只发 `eryuemu.github.io/college-wiki-hub/`。
+4. **不要把站点改名、改域名、买域名或改 `base`/`site`**。只发组织用户站 `collegewiki.github.io`；**仓库名必须保持 `collegewiki.github.io` 不变**——这个名字一改，站点直接消失。
 5. **不要为了"完整"而收录维护者自己的站点。** 本目录当前明确不收入运营者本人的站点。
 6. 不要主动新增学校条目。地址必须经过实际核查，见下。
 
@@ -31,7 +31,7 @@
 1. **提示框语法**：用 `:::note[标题]` / `:::tip` / `:::caution` / `:::danger`，配对的 `:::` 收尾。**`> [!NOTE]` 这种 GitHub/VitePress 写法不认**，会把方括号原文渲染出来。
 2. **中文界面**：必须写 `locales: { root: { label, lang } }`。只写 `defaultLocale: 'zh-CN'` 时 `<html lang>` 仍是 `en`、界面仍是英文。
 3. **标题拼接**：本版本没有 `titleTemplate`，`<title>` 永远是「页面标题 | 站点标题」。想让首页不出现「高校 Wiki 目录 | 高校 Wiki 目录」，就把首页 frontmatter 的 `title` 写成「首页」。
-4. **访问路径**：`base: '/college-wiki-hub/'`，本地必须访问 `http://localhost:4321/college-wiki-hub/`，根路径返回 404 是正常行为。Markdown 内部链接用相对路径（`about/`），不要用 `/` 开头的绝对路径，否则不带 base。
+4. **访问路径**：这是组织用户站，`base: '/'`，本地 `http://localhost:4321/` 就是站点根，与线上地址形状一致（不再有“少打一段就 404”的问题）。Markdown 内部链接仍用相对路径（`about/`），这样将来若改回项目站点不用重写。
 
 构建期无害但会刷屏的两条警告可以忽略：`The collection "i18n" does not exist or is empty`、`Entry docs → 404 was not found`。
 
@@ -67,7 +67,7 @@ npm run build                                    # 无 ERROR、页数符合预�
 grep -rn '\[!\(caution\|note\|tip\|danger\)\]' src/content/docs/ || echo "提示框语法正确"
 ```
 
-再对渲染结果做一次实际检查：条目行数、状态用词是否只在四个之内、内部链接是否带上 `/college-wiki-hub/` 前缀、`<aside>` 是否生成。**自己写的检查脚本也要验证**——先让它复现一个文档里已知的数字，再相信它的输出。
+再对渲染结果做一次实际检查：条目行数、状态用词是否只在四个之内、内部链接是否解析到根路径下的正确页面、`<aside>` 是否生成。**自己写的检查脚本也要验证**——先让它复现一个文档里已知的数字，再相信它的输出。
 
 ## Commit 与 PR
 

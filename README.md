@@ -4,7 +4,7 @@
 
 **本站不收录、不复制、不改写任何学校 Wiki 的正文内容。**
 
-线上地址：<https://eryuemu.github.io/college-wiki-hub/>
+线上地址：<https://collegewiki.github.io/>
 
 ## 每个条目记录什么
 
@@ -29,7 +29,7 @@
 
 ## 如果你是某个被登记站点的负责人
 
-要求移除条目、修改描述或隐藏某个字段，直接提 [issue](https://github.com/eryuemu/college-wiki-hub/issues) 即可，**无需说明理由**。确认收到后 7 天内处理。
+要求移除条目、修改描述或隐藏某个字段，直接提 [issue](https://github.com/collegewiki/collegewiki.github.io/issues) 即可，**无需说明理由**。确认收到后 7 天内处理。
 
 本站从未逐一征询各站点负责人意见。这是发起者的判断：登记公开站点的名称与网址本身不构成对内容的复制。若这个前提让你不适，请按上面的方式提出，我们会照办。
 
@@ -43,12 +43,12 @@
 
 ```bash
 npm ci
-npm run dev        # 开发服务器，默认 http://localhost:4321/college-wiki-hub/
+npm run dev        # 开发服务器，默认 http://localhost:4321/
 npm run build      # 构建静态产物到 dist/
 npm run preview    # 预览构建结果
 ```
 
-注意访问地址末尾的 `/college-wiki-hub/` 不能省略，GitHub Pages 项目站点都带这一层。
+这是组织用户站（仓库名就是 `collegewiki.github.io`），站点在根路径上，本地和线上地址一致，末尾不需要额外一段路径。
 
 ## 技术栈
 

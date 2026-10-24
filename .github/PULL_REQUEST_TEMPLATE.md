@@ -28,4 +28,4 @@
 
 ## 我是被登记站点的负责人吗
 
-如果是，且你的目的是要求移除或隐藏条目，**不必走 PR，也不必说明理由**——直接提 [下架请求 issue](https://github.com/eryuemu/college-wiki-hub/issues/new?template=delist.yml)，确认收到后 7 天内处理。
+如果是，且你的目的是要求移除或隐藏条目，**不必走 PR，也不必说明理由**——直接提 [下架请求 issue](https://github.com/collegewiki/collegewiki.github.io/issues/new?template=delist.yml)，确认收到后 7 天内处理。

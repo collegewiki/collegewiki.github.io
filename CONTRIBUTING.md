@@ -4,7 +4,7 @@
 
 不接受任何学校 Wiki 的正文摘录、站内截图、群号、站长个人信息。这不是审查，是本站的立身之本：一旦开始抄正文，本站就从"目录"变成"未经授权的搬运站"。
 
-各条目状态与核查方式的定义在站内页面：<https://eryuemu.github.io/college-wiki-hub/about/>。
+各条目状态与核查方式的定义在站内页面：<https://collegewiki.github.io/about/>。
 
 ## 怎么改
 
@@ -75,7 +75,7 @@ docs: 补充失效条目不删除的处理原则
 
 ## 收录标准
 
-三条，来自站内[关于本站](https://eryuemu.github.io/college-wiki-hub/about/)：
+三条，来自站内[关于本站](https://collegewiki.github.io/about/)：
 
 1. 只登记入口，不复制正文。
 2. 只登记公开可访问的站点；需要登录、加群才能看到的，标 `待核实` 而不是写进去。
