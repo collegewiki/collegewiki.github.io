@@ -1,0 +1,50 @@
+name: ✏️ 信息更正 / 举报错误
+description: 条目地址错了、状态标错了、地区写错了，或站点已失效需要更新
+title: "【更正】<学校名>"
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本站由维护者不定期人工核查，条目可能存在过期或录入错误。欢迎你直接指出，也欢迎提 PR 改正（更快）。
+
+        注意：本站**不评价**某个 Wiki 的内容对不对、好不好。这类意见请留给那个站点自己。本表单只处理**目录自身的事实错误**。
+
+  - type: input
+    id: entry
+    attributes:
+      label: 涉及哪个条目
+      placeholder: 例：成都大学
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 问题类型
+      options:
+        - 站点地址错误或已跳转他处
+        - 状态标错（该标"已失效"却写成"可访问"等）
+        - 学校名、地区写错
+        - 搭建平台写错
+        - 源码仓库与站点不是同一个项目
+        - 条目中包含不应出现的信息（正文摘录、个人信息等）
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: |
+        请给出可核查的依据：官网或新闻链接、抓取到的页面标题、数据端点内容。
+        尽量不要只附截图。只写"我打不开"不足以判定站点失效——可能是本机网络问题。
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你希望改成什么
+      placeholder: 例：状态改为「已失效」，核查日期改为 2026-10-24，并在状态后注明本机与移动网络均无法访问

@@ -1,0 +1,88 @@
+name: 🆕 收录申请
+description: 申请把一个高校 Wiki 站点加入目录
+title: "【收录申请】<学校名>"
+labels: ["new-entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本站只登记**入口**：学校名、站点网址、搭建平台、可达状态、核查日期。不复制正文，也不评价对方内容好坏。请确认这个站点是公开可访问的。
+
+  - type: input
+    id: school
+    attributes:
+      label: 学校全称
+      description: 与官方校名一致，不要用简称或昵称
+      placeholder: 西南交通大学
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 所在地区
+      placeholder: 四川成都
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 站点地址
+      description: 完整 URL，含 https://
+      placeholder: https://example.edu.cn/wiki
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: 源码仓库地址（可选）
+      placeholder: https://github.com/org/wiki
+    validations:
+      required: false
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 搭建平台
+      description: 不确定就选"未知"，我们会自行核查
+      options:
+        - VitePress
+        - Astro / Starlight
+        - Docusaurus
+        - MkDocs
+        - VuePress
+        - MediaWiki
+        - Wiki.js
+        - Halo / Typecho / WordPress
+        - Hexo / Hugo
+        - Notion / 语雀 / 飞书文档
+        - 微信公众号
+        - 单页应用（React/Vue 等）
+        - 未知
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 核查证据
+      description: |
+        只写"能打开"不视为通过——静态托管的 404 页和空壳首页同样返回 HTTP 200。
+        请给出页面标题原文，以及校名关键词在页面中出现的次数。
+      placeholder: |
+        抓取首页返回 23 KB，<title> 为「首页 | XX Wiki」，页面中「西南交通」出现 14 次。
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认
+      options:
+        - label: 该站点面向这一所学校，且公开可访问（不需要登录、加群、付费才能看正文）
+          required: true
+        - label: 我不需要在条目中登记站长姓名、手机号、私人邮箱或个人 QQ 号
+          required: true
+        - label: 我同意本条内容按 CC BY-NC-SA 4.0 发布
+          required: true

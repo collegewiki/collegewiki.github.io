@@ -1,0 +1,48 @@
+name: 🗑️ 条目下架 / 隐藏请求
+description: 被登记站点的负责人或权利人要求移除、隐藏或修改条目（无需说明理由）
+title: "【下架请求】<学校或站点名>"
+labels: ["takedown"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        如果你是某个被登记站点的负责人或权利人，可以直接要求我们移除条目、改掉描述或隐藏某个字段，**不需要说明理由，也不需要证明身份**。
+
+        本站承认一点：从未逐一征询各站点负责人的意见。登记公开站点的名称与网址，本身不构成对内容的复制——但如果这个前提让你不适，那由你决定，我们照办。
+
+        确认收到后 **7 天内**处理。
+
+  - type: input
+    id: entry
+    attributes:
+      label: 涉及哪个条目
+      placeholder: 例：南开大学 / https://example.edu.cn/wiki
+    validations:
+      required: true
+
+  - type: dropdown
+    id: action
+    attributes:
+      label: 你希望我们做什么
+      options:
+        - 整条移除
+        - 移除源码仓库链接，只保留站点地址
+        - 移除站点地址，只保留仓库链接
+        - 修改描述中的某个字段（平台、地区、状态、备注等）
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: 具体说明（可留空）
+      description: 想改哪个字段、改成什么。不愿意说原因也完全可以，直接留空。
+    validations:
+      required: false
+
+  - type: textarea
+    id: note
+    attributes:
+      label: 补充（可选）
+      placeholder: 例如希望保留一条"本站应权利人要求撤下"的说明，或什么都不写。
