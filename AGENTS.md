@@ -46,7 +46,7 @@
 
 ## 开发命令
 
-需要 Node.js 22 或更高版本。
+需要 Node.js 24，或 22.23.4 及以上——Astro 7.4 的 `engines.node` 写的是 `>=22.23.4`，GitHub 运行器上的 22.x 可能低于这个点，因此 CI 直接用 24。
 
 ```bash
 npm ci

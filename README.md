@@ -39,7 +39,7 @@
 
 ## 本地运行
 
-需要 Node.js 22 或更高版本。
+需要 Node.js 24，或 22.23.4 及以上（Astro 7.4 的 `engines` 要求）。
 
 ```bash
 npm ci
