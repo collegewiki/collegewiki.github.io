@@ -21,6 +21,7 @@ sidebar:
 
 | 学校 | 站点 | 平台 | 状态 | 最近核查 |
 | --- | --- | --- | --- | --- |
+| 河北大学 | [hbuwiki.top](https://hbuwiki.top/) | Wiki.js | 可访问 | 2026-10-24 |
 | 南开大学 | [freshnkuer.wiki](https://freshnkuer.wiki/) · [源码](https://github.com/NKUwiki/NKUwiki) | VitePress | 可访问 | 2026-10-24 |
 | 华北电力大学 | [wiki.ncepuinfo.cc](https://wiki.ncepuinfo.cc) · [源码](https://github.com/NCEPUwiki/NCEPUwiki) | VitePress | 可访问 | 2026-10-24 |
 
